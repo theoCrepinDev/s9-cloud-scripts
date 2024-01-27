@@ -1,0 +1,36 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: microservice-gateway
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+    - port:
+        number: 8080
+        name: http
+        protocol: http
+      hosts:
+        - "*"
+---
+
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: authentication-gatway
+spec:
+  hosts:
+    - "*"
+  gateways:
+    - microservice-gateway
+  http:
+    - match:
+        - uri:
+            prefix: /authentication/
+      rewrite:
+        uri: /
+      route:
+        - destination:
+            port:
+              number: 8080
+            host: bdiscount-authentication-back.default.svc.cluster.local
