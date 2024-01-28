@@ -14,8 +14,8 @@ kubectl apply -f bdiscount-authentication-back.yaml
 echo Lauching gateway
 kubectl apply -f gateway.yaml
 echo Please wait for APIs pods to be ready
-kubectl wait --for=condition=ready pod -l app=bdiscount-items-back --timeout=120s
-kubectl wait --for=condition=ready pod -l app=bdiscount-authentication-back --timeout=120s
+kubectl wait --for=condition=ready pod -l app=bdiscount-items-back --timeout=300s
+kubectl wait --for=condition=ready pod -l app=bdiscount-authentication-back --timeout=300s
 echo Launching Frontend
 cd bdiscount-front
 npm install
