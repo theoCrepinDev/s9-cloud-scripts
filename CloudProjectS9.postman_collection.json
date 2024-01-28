@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "d1b2bdd2-c559-40e7-ac56-b1b7949043d0",
+		"name": "CloudProjectS9",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18784687"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"testQ@gmail.com\",\r\n    \"password\":\"123AZE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:31380/authentication/api/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "31380",
+							"path": [
+								"authentication",
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"theqo\",\r\n    \"phoneNumber\":\"1234567890\",\r\n    \"password\": \"123AZE\",\r\n    \"email\":\"testQ@gmail.com\",\r\n    \"address\":\"address du gonz\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:31380/authentication/api/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "31380",
+							"path": [
+								"authentication",
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "check",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0UUBnbWFpbC5jb20iLCJuYW1lIjoidGhlcW8iLCJwaG9uZSI6IjEyMzQ1Njc4OTAiLCJhZGRyZXNzIjoiYWRkcmVzcyBkdSBnb256Iiwicm9sZXMiOlsiVVNFUiJdfQ.PJ6O-ze0kR5cA9Ft09S6tF0L-zfYaw_BaAN1wesv0eQ\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:31380/authentication/api/auth/check",
+							"host": [
+								"localhost"
+							],
+							"port": "31380",
+							"path": [
+								"authentication",
+								"api",
+								"auth",
+								"check"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "node",
+			"item": [
+				{
+					"name": "Get items",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0UUBnbWFpbC5jb20iLCJuYW1lIjoidGhlcW8iLCJwaG9uZSI6IjEyMzQ1Njc4OTAiLCJhZGRyZXNzIjoiYWRkcmVzcyBkdSBnb256Iiwicm9sZXMiOlsiVVNFUiJdfQ.PJ6O-ze0kR5cA9Ft09S6tF0L-zfYaw_BaAN1wesv0eQ\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:31380/items/auth/token",
+							"host": [
+								"localhost"
+							],
+							"port": "31380",
+							"path": [
+								"items",
+								"auth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\" : \"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0UUBnbWFpbC5jb20iLCJuYW1lIjoidGhlcW8iLCJwaG9uZSI6IjEyMzQ1Njc4OTAiLCJhZGRyZXNzIjoiYWRkcmVzcyBkdSBnb256Iiwicm9sZXMiOlsiVVNFUiJdfQ.PJ6O-ze0kR5cA9Ft09S6tF0L-zfYaw_BaAN1wesv0eQ\",\r\n    \"items\": [\r\n        {\"name\": \"pomme\"}\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:31380/items/bdd/postItems",
+							"host": [
+								"localhost"
+							],
+							"port": "31380",
+							"path": [
+								"items",
+								"bdd",
+								"postItems"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

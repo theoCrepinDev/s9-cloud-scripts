@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-data-tables
+      author: theocrepin
+      changes:
+        - sqlFile:
+            path: db/scripts/001-add-data.sql

@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-base-tables
+      author: theocrepin
+      changes:
+        - sqlFile:
+            path: db/scripts/001-create-tables.sql

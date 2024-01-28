@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-token-table
+      author: theocrepin
+      changes:
+        - sqlFile:
+            path: db/scripts/002-create-token-table.sql

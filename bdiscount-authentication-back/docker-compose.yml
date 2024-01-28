@@ -1,0 +1,20 @@
+version: '2'
+services:
+  app:
+    image: 'tekxover/bdiscount-authentication-back:3.1'
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres-service
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-service:5432/postgres
+  postgres-service:
+    container_name: postgres-service
+    image: 'postgres'
+    ports:
+      - "5000:5432"
+    environment:
+      POSTGRES_PASSWORD: monmotdepasse
