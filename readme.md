@@ -225,6 +225,10 @@ spec:
       targetPort: 3000
 ```
 
+After all this done you should have all thoses services and pods
+
+![Untitled](Untitled.png)
+
 ### Deployement Gateway
 
 After everything is deploy, we can (to simplify the use of the architecture) deploy a gatway to access every services from the same address.
@@ -321,6 +325,10 @@ We have decide to create a tiny react app to show the architecture working. On t
 npm i
 npm run dev
 ```
+
+Access the app on : [http://localhost:5173/](http://localhost:5173/)
+
+![Untitled](Untitled%201.png)
 
 ## Launch everything in one command
 
